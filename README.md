@@ -40,7 +40,8 @@ Our research began with a thorough review of medical journals and consultation w
 The design of our application focuses on usability, ensuring that healthcare professionals can easily input data and interpret model predictions. The interface is clean, intuitive, and accessible, designed to be used in busy clinical environments without requiring extensive training.
 
 ## Challenges we ran into 😰
-We encountered challenges in dealing with imbalanced data, as some health conditions were significantly underrepresented. This was addressed by implementing advanced sampling techniques and adjusting model evaluation metrics to focus on sensitivity and specificity.
+TODO
+Write difficuities you encountered
 
 ## Accomplishments that we're proud of 🥲
 We are proud of developing a model that not only achieves high accuracy but also adheres to ethical standards in AI, ensuring our predictions are as unbiased as possible. Additionally, seeing our application being potentially used in clinical settings has been incredibly fulfilling.
