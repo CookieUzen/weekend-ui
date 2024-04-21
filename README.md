@@ -9,9 +9,9 @@ We built a website that uses a machine learning model that takes in personal hea
 
 ## Inspiration 😋
 
-Many diseases are preventable if they are diagnosed early and promptly tackled by clinical interventions and lifestyle changes. However, early diagnosis is often challenging as diseases can be asymptomatic in their initial stages. This creates a need for a model that can identify individuals at risk for certain conditions before symptoms appear. At the same time, the intersection of machine learning and healthcare has opened new avenues for predictive diagnostics. Conditions like heart disease, asthma, and diabetic are major contributors to morbidity and mortality worldwide. The ability to predict these conditions can facilitate public health and potentially save lives. 
+We've chosen our theme and topic based on a pressing issue observed in recent years: the increasing prevalence of illnesses among the parental generation. Many diseases are preventable if they are diagnosed early and promptly tackled by clinical interventions and lifestyle changes. However, early diagnosis is often challenging as diseases can be asymptomatic in their initial stages. This creates a need for a model that can identify individuals at risk for certain conditions before symptoms appear. At the same time, the intersection of machine learning and healthcare has opened new avenues for predictive diagnostics. Conditions like heart disease, asthma, and diabetic are major contributors to morbidity and mortality worldwide. The ability to predict these conditions can facilitate public health and potentially save lives. 
 
-This motivates us to create this project, which focuses on using predictive modeling to forecast the likelihood of major health conditions that significantly impact global health, and making such predictions easily accessible for everyone by building a website with a simple user interface. 
+This motivates us to create this project, which focuses on using predictive modeling to forecast the likelihood of major health conditions that significantly impact global health, and making such predictions easily accessible for everyone by building a website with a simple user interface.
 
 ## Features 🤩
 Comprehensive Data Analysis: Utilization of statistical analysis and data visualization to select and engineer features. 
