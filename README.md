@@ -45,7 +45,8 @@ TODO
 Write difficuities you encountered
 
 ## Accomplishments that we're proud of 🥲
-We are proud of developing a model that not only achieves high accuracy but also adheres to ethical standards in AI, ensuring our predictions are as unbiased as possible. Additionally, seeing our application being potentially used in clinical settings has been incredibly fulfilling.
+We are proud of developing a model that not only achieves high accuracy TODO is it?
+Additionally, seeing our application being potentially used in clinical settings has been incredibly fulfilling.
 
 ## What we learned 🤗
 Throughout this project, we've gained a deeper understanding of machine learning applications in healthcare, the importance of meticulous data preprocessing, and the ethical implications of predictive modeling. We also learned the value of interdisciplinary collaboration, combining insights from data science, medicine, and UX design!
