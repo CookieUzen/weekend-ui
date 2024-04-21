@@ -1,17 +1,8 @@
 import streamlit as st
 import time
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, StandardScaler
 import xgboost as xgb
 import pandas as pd
 import numpy as np
-from joblib import load, dump
-import joblib
 import copy
 
 def predict_new_entry(new_data, label_encoders, scaler, model):

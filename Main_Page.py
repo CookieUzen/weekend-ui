@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-import copy
 
 # TODO: DISABLE DEBUG MODE
 if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'false':
@@ -14,10 +13,10 @@ def collect_user_data():
 
     with st.form('user_data_form'):
         user_data['sex'] = st.selectbox("Select your biological sex", ('Male', 'Female'))
-        user_data['age'] = st.number_input("Enter your age", min_value=18, max_value=100)
+        user_data['age'] = st.number_input("Enter your age", min_value=18, max_value=100, step=5)
         user_data['race'] = st.selectbox("Enter your race", ('American Indian/Alaskan Native', 'White', 'Black', 'Hispanic', 'Asian', 'Other'))
-        user_data['height'] = st.number_input("Enter your height in cm", min_value=1)
-        user_data['weight'] = st.number_input("Enter your weight in kg", min_value=1)
+        user_data['height'] = st.number_input("Enter your height in cm", min_value=1, step=5)
+        user_data['weight'] = st.number_input("Enter your weight in kg", min_value=1, step=5)
         user_data['sleepTime'] = st.number_input("Enter sleep time in hours", min_value=0.0, max_value=24.0, step=0.5)
         user_data['physicalActivity'] = st.selectbox("Do you do physical activity?", ('Yes', 'No'), index=0)
         user_data['diabetic'] = st.selectbox("Are you diabetic?", ('Yes', 'No'), index=1)
