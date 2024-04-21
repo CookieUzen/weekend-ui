@@ -70,10 +70,11 @@ if st.session_state.get('debug', False):
     st.write(user_data)
 
 # Chart selection sidebar
-chart_option = st.sidebar.selectbox(
-    "Choose a chart to display",
-    ("BMI vs Heart Disease", "Smoking vs Heart Disease", "Age vs Heart Disease")
-)
+with st.sidebar:
+    chart_option = st.radio(
+        "Choose a chart to display",
+        ("BMI vs Heart Disease", "Smoking vs Heart Disease", "Age vs Heart Disease")
+    )
 
 if chart_option == "BMI vs Heart Disease":
     plot_bmi_vs_heart_disease(data)

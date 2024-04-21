@@ -195,7 +195,8 @@ def predict_sleep_disorders(new_data, model, label_encoders, scaler, label_y_enc
 
 
 # Sidebar for selecting model type
-model_type = st.sidebar.selectbox("Select Model Type", ["Skin Health Prediction", "Sleep Disorder Prediction"])
+with st.sidebar:
+    model_type = st.radio("Choose a model for prediction", ["Skin Health Prediction", "Sleep Disorder Prediction"])
 
 # Based on selection, either load the health or sleep model
 if model_type == "Skin Health Prediction":

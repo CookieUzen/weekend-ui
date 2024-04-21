@@ -66,7 +66,8 @@ st.write("Please submit your data in this page to get prediction")
 #     st.session_state.user_data = sample_data    
 
 # Sidebar for selecting which form to display
-form_choice = st.sidebar.selectbox("Select Form to Fill", ["Skin Health Form", "Sleep Health Form"])
+with st.sidebar:
+    form_choice = st.radio("Select Form to Fill and get prediction !", ["Skin Health Form", "Sleep Health Form"])
 
 if form_choice == "Skin Health Form":
     collect_user_data()

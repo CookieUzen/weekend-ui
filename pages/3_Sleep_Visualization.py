@@ -80,7 +80,7 @@ data = load_data()
 # 显示图表选择器
 with st.sidebar:
     selected_chart = st.radio(
-        "Select a Chart",
+        "Choose a chart to display",
         options=["Age Distribution", "Sleep Duration vs Quality", "Occupation vs Sleep Quality", 
                 "BMI Category vs Heart Rate", "Stress Level vs Sleep Disorders"]
     )
