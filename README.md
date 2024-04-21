@@ -2,7 +2,7 @@
 ## Project Overview 😇
 This project utilizes machine learning techniques to predict the likelihood of developing heart disease, mental health issues, asthma, and skin cancer. By analyzing relavant columns, our models aim to provide early warnings to individuals at risk, thereby supporting preventive healthcare measures.
 
-## Inspiration
+## Inspiration 😋
 The motivation behind this project was to leverage the power of data science and machine learning to make a tangible difference in people's lives by predicting severe health conditions before they become critical. The ability to predict these conditions can facilitate early intervention and potentially save lives.
 
 ## Features 🤩
@@ -36,7 +36,7 @@ Thanks to all the public datasets that allowed us to learn and play around. Spec
 ## What it does 🤔
 Our application inputs user data such as demographic details, lifestyle information, and basic medical history to predict the likelihood of developing specific health conditions. This tool is designed to be used by healthcare professionals to identify at-risk patients and possibly intervene earlier than usual.
 
-## How we built it 
+## How we built it 🤔
 We built this project using Python for data processing and machine learning, employing libraries such as Pandas, scikit-learn, and TensorFlow for more complex model implementations. The user interface was created using Streamlit, which allowed us to quickly develop and deploy an interactive web application.
 
 ## Research 📚
