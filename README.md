@@ -44,11 +44,11 @@ Our research began with a thorough review of medical journals and consultation w
 The design of our application focuses on usability, ensuring that healthcare professionals can easily input data and interpret model predictions. The interface is clean, intuitive, and accessible, designed to be used in busy clinical environments without requiring extensive training.
 
 ## Challenges we ran into 😰
-TODO
-Write difficuities you encountered
+1. Model Deployment: When attempting to deploy the model on our website, the model behaves unexpectedly.  We add a preprocess module for processing user's input and fix this issue.
+2. Pages & Entry Point Designation: Initially, we were confused by the UX design. We resolved this issue by soliciting user feedback on our product, which ultimately led to satisfaction with our interaction logic. Hooray!
 
 ## Accomplishments that we're proud of 🥲
-We are proud of developing a model that not only achieves high accuracy TODO is it?
+We are proud of developing a model that not only achieves high accuracy but also has pratical application in our daily life.
 Additionally, seeing our application being potentially used in clinical settings has been incredibly fulfilling.
 
 ## What we learned 🤗
