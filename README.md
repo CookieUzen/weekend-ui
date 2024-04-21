@@ -1,12 +1,17 @@
 # Predictive Modeling for Health Conditions
 ## Project Overview 😇
-Do you have skin cancer? This project utilizes machine learning techniques to predict the likelihood of developing heart disease, mental health issues, asthma, and skin cancer. By analyzing relavant columns, our models aim to provide early warnings to individuals at risk, thereby supporting preventive healthcare measures. This is the project for Caltech Hackathon 2024. 
+Do you have skin cancer? This project creates a website that utilizes machine learning techniques to predict an individual's likelihood of developing several diseases, such as heart disease, diabetes, and asthma. By analyzing relevant lifestyle data, our models aim to provide early warnings to individuals at risk, thereby supporting preventive healthcare measures and improving public health outcomes. 
+
+This is the project for Caltech Hackathon 2024. 
 
 ### Problem Statement
-We build a predictive model that uses personal health data to estimate the risk of certain diseases to prevent these diseases.
+We built a website that uses a machine learning model that takes in personal health data to predict and estimate the user's risk of certain diseases. 
 
 ## Inspiration 😋
-In recent years, the intersection of machine learning and healthcare has opened new avenues for predictive diagnostics. This project focuses on using predictive modeling to forecast the likelihood of major health conditions, which significantly impact global health. Conditions like heart disease, asthma, and diabetic are major contributors to morbidity and mortality worldwide. The ability to predict these conditions can facilitate public health and potentially save lives. This serves as the motivation of our project. 
+
+Many diseases are preventable if they are diagnosed early and promptly tackled by clinical interventions and lifestyle changes. However, early diagnosis is often challenging as diseases can be asymptomatic in their initial stages. This creates a need for a model that can identify individuals at risk for certain conditions before symptoms appear. At the same time, the intersection of machine learning and healthcare has opened new avenues for predictive diagnostics. Conditions like heart disease, asthma, and diabetic are major contributors to morbidity and mortality worldwide. The ability to predict these conditions can facilitate public health and potentially save lives. 
+
+This motivates us to create this project, which focuses on using predictive modeling to forecast the likelihood of major health conditions that significantly impact global health, and making such predictions easily accessible for everyone by building a website with a simple user interface. 
 
 ## Features 🤩
 Comprehensive Data Analysis: Utilization of statistical analysis and data visualization to select and engineer features. 
@@ -33,13 +38,15 @@ Set `DEBUG=false` in your environment to disable debug logs.
 This is already done in the Dockerfile.
 
 ## What it does 🤔
-Our application inputs user data such as demographic details, lifestyle information, and basic medical history to predict the likelihood of developing specific health conditions. This tool is designed to be used by healthcare professionals to identify at-risk patients and possibly intervene earlier than usual.
+Our application inputs user data such as demographic details, lifestyle information, and basic medical history to predict the likelihood of developing specific health conditions. 
+This tool is designed to be used by healthcare professionals to identify at-risk patients and possibly intervene earlier than usual. 
 
 ## How we built it 🫕
 We built this project using Python for data processing and machine learning, employing libraries such as Pandas, scikit-learn, and xgBoost (&& !Tensorflow) for more complex model implementations. The user interface was created using Streamlit, which allowed us to quickly develop and deploy an interactive web application.
 
 ## Research 📚
-Our research began with a thorough review of medical journals and consultation with healthcare professionals to identify key indicators of each health condition. This informed our data collection and feature selection, ensuring our model's relevance to real-world scenarios.
+Our research began with a thorough review of medical journals and consultation with healthcare professionals to identify key indicators of each health condition. 
+This informed our data collection and feature selection, ensuring our model's relevance to real-world scenarios.
 
 ## Design 🍡
 The design of our application focuses on usability, ensuring that healthcare professionals can easily input data and interpret model predictions. The interface is clean, intuitive, and accessible, designed to be used in busy clinical environments without requiring extensive training.
@@ -60,5 +67,5 @@ Throughout this project, we've gained a deeper understanding of machine learning
 Uzen, Tommy, Tina, Annie. Hats off to you!
 
 ## Acknowledgments 😊
-Thanks to all the public datasets that allowed us to learn and play around. Specifically, we utilize health data sets from https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease/data. 
-
+Thanks to all the public datasets that allowed us to learn and play around. Specifically, we utilized health data sets from 
+https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease/data. 
