@@ -2,10 +2,12 @@ import streamlit as st
 import os
 
 # TODO: DISABLE DEBUG MODE
-if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'false':
-    st.session_state.debug = False
-else:
-    st.session_state.debug = True
+# if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'false':
+#     st.session_state.debug = False
+# else:
+#     st.session_state.debug = True
+
+st.session_state.debug = False
 
 def collect_user_data():
     '''Pops open a form to collect user data. Updates automatically'''
