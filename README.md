@@ -31,7 +31,7 @@ This is already done in the Dockerfile.
 ## What it does 🤔
 Our application inputs user data such as demographic details, lifestyle information, and basic medical history to predict the likelihood of developing specific health conditions. This tool is designed to be used by healthcare professionals to identify at-risk patients and possibly intervene earlier than usual.
 
-## How we built it 🤔
+## How we built it 🫕
 We built this project using Python for data processing and machine learning, employing libraries such as Pandas, scikit-learn, and xgBoost (&& !Tensorflow) for more complex model implementations. The user interface was created using Streamlit, which allowed us to quickly develop and deploy an interactive web application.
 
 ## Research 📚
