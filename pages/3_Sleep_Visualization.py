@@ -55,7 +55,7 @@ def plot_stress_vs_sleep_disorders(data):
 @st.cache_resource
 def load_data(uploaded_file='./Sleep_health_and_lifestyle_dataset.csv'):
     # 读取CSV文件内容为Pandas DataFrame
-    with st.status("Loading internal database", expanded=False, state="running") as status_bar:
+    with st.spinner('Loading data...'):
         data = pd.read_csv(uploaded_file)
         time.sleep(0.5)
     return data

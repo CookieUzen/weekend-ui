@@ -45,7 +45,7 @@ def plot_age_vs_heart_disease(data):
     plt.tight_layout()
     st.pyplot(plt)
 
-@st.experimental_memo
+
 def load_data(uploaded_file='heart_2020_cleaned.csv'):
     with st.spinner('Loading data...'):
         data = pd.read_csv(uploaded_file)
@@ -53,11 +53,11 @@ def load_data(uploaded_file='heart_2020_cleaned.csv'):
         time.sleep(0.5)  # Simulate delay for user feedback
     return data
 
-data = load_data()
-
 st.write("# Heart Health Data Overview")
 st.write("Below you can compare your health data with the average values in the selected charts.")
 st.write("Click at the right sidebar to switch the graph showing on the page")
+
+data = load_data()
 
 # Load user data and handle missing data case
 user_data = st.session_state.get('user_data', None)

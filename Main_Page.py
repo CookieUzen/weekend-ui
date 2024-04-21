@@ -34,6 +34,7 @@ def collect_user_data():
         submitted = st.form_submit_button("Submit")
         if submitted:
             st.session_state.user_data = user_data
+            st.success("Skin health data submitted!")
 
 def collect_user_sleep_data():
     '''Collect sleep-specific data from the user.'''
