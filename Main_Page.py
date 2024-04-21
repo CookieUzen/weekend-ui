@@ -1,9 +1,12 @@
 import streamlit as st
-import pandas as pd
+import os
 import copy
 
 # TODO: DISABLE DEBUG MODE
-st.session_state.debug = True
+if 'DEBUG' in os.environ and os.environ['DEBUG'] == 'false':
+    st.session_state.debug = False
+else:
+    st.session_state.debug = True
 
 def collect_user_data():
     '''Pops open a form to collect user data. Updates automatically'''
