@@ -48,7 +48,7 @@ We are proud of developing a model that not only achieves high accuracy but also
 ## What we learned 🤗
 Throughout this project, we've gained a deeper understanding of machine learning applications in healthcare, the importance of meticulous data preprocessing, and the ethical implications of predictive modeling. We also learned the value of interdisciplinary collaboration, combining insights from data science, medicine, and UX design!
 
-# Authors 🫡
+## Authors 🫡
 Uzen, Tommy, Tina, Annie. Hats off to you!
 
 ## Acknowledgments 😊
