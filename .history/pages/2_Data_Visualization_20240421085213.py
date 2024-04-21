@@ -3,9 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import time
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning, module="streamlit")
-
 
 def plot_bmi_vs_heart_disease(data):
     plt.figure(figsize=(10, 6))
@@ -49,7 +46,6 @@ def plot_age_vs_heart_disease(data):
 def load_data(uploaded_file='heart_2020_cleaned.csv'):
     with st.spinner('Loading data...'):
         data = pd.read_csv(uploaded_file)
-        data['HeartDisease'] = data['HeartDisease'].map({'Yes': 1, 'No': 0})  # Ensure this conversion early
         time.sleep(0.5)  # Simulate delay for user feedback
     return data
 
@@ -57,7 +53,6 @@ data = load_data()
 
 st.write("# Heart Health Data Overview")
 st.write("Below you can compare your health data with the average values in the selected charts.")
-st.write("Click at the right sidebar to switch the graph showing on the page")
 
 # Load user data and handle missing data case
 user_data = st.session_state.get('user_data', None)

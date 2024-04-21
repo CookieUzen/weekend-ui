@@ -41,6 +41,7 @@ def collect_user_sleep_data():
         user_sleep_data['Age'] = st.number_input("Enter your age", min_value=0, max_value=100, value=25)
         user_sleep_data['Sleep Duration'] = st.number_input("Enter sleep duration in hours", min_value=0.0, max_value=24.0, value=7.0, step=0.1)
         user_sleep_data['Quality of Sleep'] = st.slider("Enter sleep quality score", min_value=1, max_value=10, value=6, step=1)
+        user_sleep_data['Sleep Disorder'] = st.multiselect("Select any sleep disorders you have", ['Insomnia', 'Sleep Apnea', 'Narcolepsy', 'None'], default=['None'])
         user_sleep_data['Daily Steps'] = st.number_input("Enter your daily steps", min_value=0, value=5000)
         user_sleep_data['Gender'] = st.selectbox("Select your gender", ['Male', 'Female'])
         user_sleep_data['BMI Category'] = st.selectbox("Select your BMI Category", ['Normal', 'Overweight', 'Obese', 'Normal weight'])

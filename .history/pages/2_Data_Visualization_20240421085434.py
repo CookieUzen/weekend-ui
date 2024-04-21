@@ -3,9 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import time
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning, module="streamlit")
-
 
 def plot_bmi_vs_heart_disease(data):
     plt.figure(figsize=(10, 6))
@@ -57,7 +54,7 @@ data = load_data()
 
 st.write("# Heart Health Data Overview")
 st.write("Below you can compare your health data with the average values in the selected charts.")
-st.write("Click at the right sidebar to switch the graph showing on the page")
+st.write("Click at the right sidebar to switch the graph")
 
 # Load user data and handle missing data case
 user_data = st.session_state.get('user_data', None)

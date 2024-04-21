@@ -3,9 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import time
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning, module="streamlit")
-
 
 def plot_bmi_vs_heart_disease(data):
     plt.figure(figsize=(10, 6))

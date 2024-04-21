@@ -3,9 +3,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import time
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning, module="streamlit")
-
 
 def plot_bmi_vs_heart_disease(data):
     plt.figure(figsize=(10, 6))
@@ -19,8 +16,7 @@ def plot_bmi_vs_heart_disease(data):
     plt.ylabel('Percentage with Heart Disease (%)')
     plt.xticks(rotation=45)
     plt.grid(True)
-    plt.tight_layout()
-    st.pyplot(plt)
+    plt.show()
 
 def plot_smoking_vs_heart_disease(data):
     plt.figure(figsize=(10, 6))
@@ -30,8 +26,7 @@ def plot_smoking_vs_heart_disease(data):
     plt.xlabel('Smoking Status')
     plt.ylabel('Percentage with Heart Disease (%)')
     plt.grid(True)
-    plt.tight_layout()
-    st.pyplot(plt)
+    plt.show()
 
 def plot_age_vs_heart_disease(data):
     plt.figure(figsize=(12, 8))
@@ -42,42 +37,51 @@ def plot_age_vs_heart_disease(data):
     plt.ylabel('Percentage with Heart Disease (%)')
     plt.xticks(rotation=45)
     plt.grid(True)
-    plt.tight_layout()
-    st.pyplot(plt)
+    plt.show()
 
-@st.experimental_memo
-def load_data(uploaded_file='heart_2020_cleaned.csv'):
-    with st.spinner('Loading data...'):
+
+# 使用st.cache装饰器来缓存加载的数据
+@st.cache_resource
+def load_data(uploaded_file='./Sleep_health_and_lifestyle_dataset.csv'):
+    # 读取CSV文件内容为Pandas DataFrame
+    with st.status("Loading internal database", expanded=False, state="running") as status_bar:
         data = pd.read_csv(uploaded_file)
-        data['HeartDisease'] = data['HeartDisease'].map({'Yes': 1, 'No': 0})  # Ensure this conversion early
-        time.sleep(0.5)  # Simulate delay for user feedback
+        time.sleep(0.5)
+        status_bar.update(label="Database loaded!", state="complete", expanded=False)
     return data
 
-data = load_data()
+# 显示DataFrame的内容
+st.write("# Average Sleep health data:")
+st.write("You can compare your health data with the average value in the chosen chart")
 
-st.write("# Heart Health Data Overview")
-st.write("Below you can compare your health data with the average values in the selected charts.")
-st.write("Click at the right sidebar to switch the graph showing on the page")
-
-# Load user data and handle missing data case
-user_data = st.session_state.get('user_data', None)
-if user_data is None:
-    st.warning("Please load user data on the main page first.")
+# Get our user data from the cache
+if 'user_data' not in st.session_state:
+    st.warning("Please load user data in Main Page first!")
+    st.page_link("./Main_Page.py", label="Click here to go to Main Page")
     st.stop()
 
-if st.session_state.get('debug', False):
+user_data = pd.DataFrame.from_dict(st.session_state.user_data, orient='index').T
+if st.session_state.debug:
     st.write(st.session_state.user_data)
     st.write(user_data)
 
-# Chart selection sidebar
-chart_option = st.sidebar.selectbox(
-    "Choose a chart to display",
-    ("BMI vs Heart Disease", "Smoking vs Heart Disease", "Age vs Heart Disease")
-)
+data = load_data()
 
-if chart_option == "BMI vs Heart Disease":
-    plot_bmi_vs_heart_disease(data)
-elif chart_option == "Smoking vs Heart Disease":
-    plot_smoking_vs_heart_disease(data)
-elif chart_option == "Age vs Heart Disease":
-    plot_age_vs_heart_disease(data)
+# 显示图表选择器
+with st.sidebar:
+    selected_chart = st.radio(
+        "Select a Chart",
+        options=["Age Distribution", "Sleep Duration vs Quality", "Occupation vs Sleep Quality", 
+                "BMI Category vs Heart Rate", "Stress Level vs Sleep Disorders"]
+    )
+
+if selected_chart == "Age Distribution":
+    plot_age_vs_sleep_quality(data, user_data)
+elif selected_chart == "Sleep Duration vs Quality":
+    plot_sleep_duration_vs_quality(data, user_data)
+elif selected_chart == "Occupation vs Sleep Quality":
+    plot_occupation_vs_sleep_quality(data)
+elif selected_chart == "BMI Category vs Heart Rate":
+    plot_bmi_vs_heart_rate(data)
+elif selected_chart == "Stress Level vs Sleep Disorders":
+    plot_stress_vs_sleep_disorders(data)
