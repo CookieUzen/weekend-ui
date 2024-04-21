@@ -6,7 +6,8 @@ This project utilizes machine learning techniques to predict the likelihood of d
 In recent years, the intersection of machine learning and healthcare has opened new avenues for predictive diagnostics. This project focuses on using predictive modeling to forecast the likelihood of major health conditions, which significantly impact global health. Conditions like heart disease, asthma, and diabetic are major contributors to morbidity and mortality worldwide. The ability to predict these conditions can facilitate public health and potentially save lives. This serves as the motivation of our project. 
 
 ## Features 🤩
-Comprehensive Data Analysis: Utilization of statistical analysis and data visualization to select and engineer features.
+Comprehensive Data Analysis: Utilization of statistical analysis and data visualization to select and engineer features. 
+
 Advanced Predictive Modeling: Implementation of multiple machine learning algorithms to optimize prediction accuracy.
 Iterative Testing and Refinement: Continuous model improvement based on feedback and new data.
 
