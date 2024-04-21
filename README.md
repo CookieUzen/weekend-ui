@@ -27,22 +27,16 @@ Note that the website runs in debug mode by default.
 Set `DEBUG=false` in your environment to disable debug logs.
 This is already done in the Dockerfile.
 
-# Authors 🫡
-Uzen, Tommy, Tina, Annie. Hats off to you!
-
-## Acknowledgments 😊
-Thanks to all the public datasets that allowed us to learn and play around. Specifically, we use 
-
 ## What it does 🤔
 Our application inputs user data such as demographic details, lifestyle information, and basic medical history to predict the likelihood of developing specific health conditions. This tool is designed to be used by healthcare professionals to identify at-risk patients and possibly intervene earlier than usual.
 
 ## How we built it 🤔
-We built this project using Python for data processing and machine learning, employing libraries such as Pandas, scikit-learn, and TensorFlow for more complex model implementations. The user interface was created using Streamlit, which allowed us to quickly develop and deploy an interactive web application.
+We built this project using Python for data processing and machine learning, employing libraries such as Pandas, scikit-learn, and xgBoost (&& !Tensorflow) for more complex model implementations. The user interface was created using Streamlit, which allowed us to quickly develop and deploy an interactive web application.
 
 ## Research 📚
 Our research began with a thorough review of medical journals and consultation with healthcare professionals to identify key indicators of each health condition. This informed our data collection and feature selection, ensuring our model's relevance to real-world scenarios.
 
-## Design 
+## Design 🍡
 The design of our application focuses on usability, ensuring that healthcare professionals can easily input data and interpret model predictions. The interface is clean, intuitive, and accessible, designed to be used in busy clinical environments without requiring extensive training.
 
 ## Challenges we ran into 😰
@@ -53,3 +47,10 @@ We are proud of developing a model that not only achieves high accuracy but also
 
 ## What we learned 🤗
 Throughout this project, we've gained a deeper understanding of machine learning applications in healthcare, the importance of meticulous data preprocessing, and the ethical implications of predictive modeling. We also learned the value of interdisciplinary collaboration, combining insights from data science, medicine, and UX design!
+
+# Authors 🫡
+Uzen, Tommy, Tina, Annie. Hats off to you!
+
+## Acknowledgments 😊
+Thanks to all the public datasets that allowed us to learn and play around. Specifically, we utilize health data sets from https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease/data. 
+
