@@ -53,19 +53,20 @@ The design of our application focuses on usability, ensuring that healthcare pro
 
 ## Challenges we ran into 😰
 1. Model Deployment: During the model deployment phase, the model behaved unexpectedly when integrated into our website. We addressed this by adding a preprocessing module to handle user inputs more effectively. 
-2. Pages & Entry Point Designation: The initial user experience (UX) design was confusing. We overcame the challange by actively soliciting and incorporating user feedback, which improved our interaction logic and user satisfaction.  Hooray!
-3. In designing the model, we considered the problem that most datasets will not each have the data input we want. After trying different datasets, we solved this problem by using a huge dataset and data preprocessing.
+2. In designing the model, we considered the problem that most datasets will not each have the data input we want. After trying different datasets, we solved this problem by using a huge dataset and data preprocessing.
+3. Communication: Since its our first Hackathon, we did not have a good idea how to organize our tasks. As a result we had issues with communication and assigning tasks. Sometimes we had problems overlapping work which cause time to be wasted, or changes in code that broke old code.
 
 ## Accomplishments that we're proud of 🥲
-We are proud of developing a model that not only achieves high accuracy but also has pratical application in our daily life.
-Additionally, seeing our application being potentially used in clinical settings has been incredibly fulfilling.
+We are proud of developing a model that not only achieves high accuracy but also has practical application in our daily life.
+Additionally, we are proud of learning to write frontend in a day!
 
 ## What we learned 🤗
 Throughout this project, we've gained a deeper understanding of machine learning applications in healthcare, the importance of data preprocessing, and the ethical implications of predictive modeling. We also learned the value of interdisciplinary collaboration, combining insights from data science, medicine, and UX design! 
 
 ## Authors 🫡
-Uzen, Tommy, Tina, Annie. Hats off to you!
+Uzen, Tommy, Tina, Annie.
 
 ## Acknowledgments 😊
 Thanks to all the public datasets that allowed us to learn and play around. Specifically, we utilized health data sets from 
 https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease/data. 
+Additionally, [streamlit](https://streamlit.io/) helped us make the ui development process easy.
