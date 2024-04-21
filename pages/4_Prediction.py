@@ -210,7 +210,7 @@ if model_type == "Skin Health Prediction":
         progress_text = "Processing Data"
         my_bar = st.progress(50, text=progress_text)
         model_input_array = get_user_input()
-        time.sleep(0.3)
+        time.sleep(0.2)
         my_bar.progress(100, text=progress_text)
 
         # Task 2
@@ -219,7 +219,7 @@ if model_type == "Skin Health Prediction":
         model = load_xgb_model()
 
         for percent_complete in range(100):
-            time.sleep(0.01)
+            time.sleep(0.005)
             # increment the progress bar
             my_bar.progress(percent_complete + 1, text=progress_text)
 
@@ -228,14 +228,14 @@ if model_type == "Skin Health Prediction":
         my_bar = st.progress(0, text=progress_text)
 
         for percent_complete in range(100):
-            time.sleep(0.01)
+            time.sleep(0.005)
 
             my_bar.progress(percent_complete + 1, text=progress_text)
 
         st.session_state.prediction, st.session_state.pred_prob = runInference(model)
         st.session_state.prediction = st.session_state.prediction[0]
 
-        time.sleep(1)
+        time.sleep(0.02)
         status.update(label="Done!", state="complete", expanded=False)
 
     st.header('Prediction Results')
@@ -267,12 +267,12 @@ elif model_type == "Sleep Disorder Prediction":
     with st.status("Loading", expanded=True, state="running") as status:
         # Task 1
         progress_text = "Processing Data"
-        my_bar = st.progress(50, text=progress_text)
+        my_bar = st.progress(0, text=progress_text)
         # check data first
         if 'user_sleep_data' not in st.session_state :
             st.warning("Please load user data in Main Page first!")
             st.stop()
-        time.sleep(0.3)
+        time.sleep(0.2)
         my_bar.progress(100, text=progress_text)
 
         # Task 2
@@ -280,14 +280,28 @@ elif model_type == "Sleep Disorder Prediction":
         my_bar = st.progress(0, text=progress_text)
 
         user_data = st.session_state.user_sleep_data
-        time.sleep(0.3)
-        my_bar.progress(100, text=progress_text)
         # Load Logistic Regression model
         # try:
         #     model, scaler, label_encoders = load_xgb_sleep_model()
         #     prediction = predict_sleep_disorders(user_data, label_encoders, scaler, model)
         #     st.write("Your Sleep Disorder Prediction Results:")
+
+        for percent_complete in range(100):
+            time.sleep(0.005)
+            # increment the progress bar
+            my_bar.progress(percent_complete + 1, text=progress_text)
+
+        # Task 3
+        progress_text = "Making Predictions"
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.005)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+        
         model, label_encoders, scaler, label_encoder_y  = train_and_save_sleep_xgb_model('./Sleep_health_and_lifestyle_dataset.csv')
+        time.sleep(0.02)
+        status.update(label="Done!", state="complete", expanded=False)
         
 
     prediction = predict_sleep_disorders(user_data, model, label_encoders, scaler, label_encoder_y)
