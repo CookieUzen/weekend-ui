@@ -1,6 +1,6 @@
 # Predictive Modeling for Health Conditions
 ## Project Overview 😇
-This project utilizes machine learning techniques to predict the likelihood of developing heart disease, mental health issues, asthma, and skin cancer. By analyzing relavant columns, our models aim to provide early warnings to individuals at risk, thereby supporting preventive healthcare measures. This is the project for Caltech Hackathon 2024. 
+Do you have skin cancer? This project utilizes machine learning techniques to predict the likelihood of developing heart disease, mental health issues, asthma, and skin cancer. By analyzing relavant columns, our models aim to provide early warnings to individuals at risk, thereby supporting preventive healthcare measures. This is the project for Caltech Hackathon 2024. 
 
 ### Problem Statement
 We build a predictive model that uses personal health data to estimate the risk of certain diseases to prevent these diseases.
